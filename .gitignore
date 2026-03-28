@@ -1,0 +1,9 @@
+.git-credentials
+.zsh_history
+.cache/
+.android/
+.config/
+.local/
+storage/
+*.pyc
+__pycache__/
