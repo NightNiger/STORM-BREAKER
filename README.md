@@ -20,7 +20,7 @@ Disclaimer: Инструмент создан исключительно для 
 ## 🛠️ Установка
 ```bash
 pkg update && pkg upgrade -y
-pkg install python git
+pkg install python git -y
 git clone [https://github.com/NightNiger/STORM-BREAKER]
 cd STORM-BREAKER
 cd storm-breaker
