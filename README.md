@@ -10,6 +10,13 @@
 * **Nuclear Engine:** Высокопроизводительный многопоточный движок на сокета>
 * **Extreme RPS:** Достигает более **8000+ запросов в секунду** на мобильно>
 
+🔗 Контакты
+Telegram: https://t.me/Rrupv
+GitHub: NightNiger
+
+Disclaimer: Инструмент создан исключительно для образовательных целей и тестов своих сетей 
+
+
 ## 🛠️ Установка
 ```bash
 pkg update && pkg upgrade
@@ -18,11 +25,6 @@ git clone [https://github.com/NightNiger/STORM-BREAKER](https://github.com/>
 cd STORM-BREAKER
 python main.py
 
-🔗 Контакты
-Telegram: https://t.me/Rrupv
-GitHub: NightNiger
-
-Disclaimer: Инструмент создан исключительно для образовательных целей и тес>
 
 
 
