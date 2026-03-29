@@ -1,23 +1,21 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import sys
 import os
 
+# Добавляем путь к модулям
 sys.path.append(os.path.join(os.path.dirname(__file__), 'modules'))
 
-from modules.config import *
 from modules.ui import banner
 from modules.core import StormProBreaker
 
 def main():
-    # Создаем объект класса из core.py
-    breaker = StormProBreaker()
-    # Запускаем твой основной цикл
-    breaker.run() 
+    try:
+        breaker = StormProBreaker()
+        breaker.run()
+    except KeyboardInterrupt:
+        print(f"\n Stopping...")
+        sys.exit()
 
 if __name__ == "__main__":
-    try:
-        main()
-    except KeyboardInterrupt:
-        print(f"\n{R}[!] Stopping...{RE}")
-        sys.exit()
+    main()
 
