@@ -24,7 +24,3 @@ pkg install python git
 git clone [https://github.com/NightNiger/STORM-BREAKER](https://github.com/>
 cd STORM-BREAKER
 python main.py
-
-
-
-
