@@ -1,50 +1,25 @@
-​🌪️ STORM-BREAKER v5.0 ULTRA
+# 🌪️ STORM-BREAKER PRO v5.0 ULTRA
 
+**STORM-BREAKER** — это мощный сетевой утилитарный инструмент для аудита и тестирования нагрузки, оптимизированный специально для мобильных систем через **Termux**.
 
-​​[RU] STORM-BREAKER — это высокопроизводительная асинхронная утилита на Python 3.13 для проведения аудита сетевой безопасности и стресс-тестирования.
+> **Author:** NightNiger  
+> **Studio:** Night-Studio  
+> **Version:** 5.0 (Nuclear Edition)
 
-​[EN] STORM-BREAKER is a high-performance asynchronous Python 3.13 utility for network security auditing and stress testing.
+## 🚀 Особенности
+* **Nuclear Engine:** Высокопроизводительный многопоточный движок на сокетах (UDP).
+* **Extreme RPS:** Достигает более **8000+ запросов в секунду** на мобильном железе.
 
-
-​🚀 Особенности / Features
-​Async Engine: Максимальный RPS за счет использования aiohttp вместо обычных потоков.
-
-Advanced Logging: Автоматическое сохранение детальных отчетов в форматах JSON и CSV.
-
-WAF Bypass: Рандомные User-Agent и кастомные заголовки для обхода фильтров.
-
-​🛠 Установка / Installation (Termux)
-
+## 🛠️ Установка
+```bash
 pkg update && pkg upgrade
-
 pkg install python git
+git clone [https://github.com/NightNiger/STORM-BREAKER](https://github.com/NightNiger/STORM-BREAKER)
+cd STORM-BREAKER
+python main.py
 
-pip install aiohttp
+​🔗 Контакты
+​Telegram: https://t.me/Rrupv
+​GitHub: NightNiger
 
-git clone https://github.com/Moska-studio/storm-breaker.git
-
-cd storm-breaker
-python storm_pro.py
-
-💻 Использование / Usage
-​Запустите скрипт / Run the script: python storm_pro.py
-
-Введите цель / Enter target: Укажите IP или домен.
-
-​📊 Технические характеристики / Technical Specs
-​Language: Python 3.13+
-
-​Platform: Android (Termux), Linux, Windows
-​
-Architecture: Asynchronous non-blocking I/O (Asyncio).
-​
-Reports: JSON / CSV logging system.
-
-​⚠️ Отказ от ответственности / Disclaimer
-​[RU] Эта утилита создана исключительно для образовательных целей и легального аудита. Автор не несет ответственности за неправомерное использование.
-[EN] This utility is created for educational purposes and legal security auditing only. The author is not responsible for any misuse.
-
-Author: Moska-studio [@Rrupv]
-
-⭐ Если вам понравился проект, поставьте звезду! / If you like this project, give it a star!
-
+​Disclaimer: Инструмент создан исключительно для образовательных целей и тестирования собственных сетей.
