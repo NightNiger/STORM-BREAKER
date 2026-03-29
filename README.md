@@ -21,6 +21,8 @@ Disclaimer: Инструмент создан исключительно для 
 ```bash
 pkg update && pkg upgrade
 pkg install python git
-git clone [https://github.com/NightNiger/STORM-BREAKER](https://github.com/>
+git clone [https://github.com/NightNiger/STORM-BREAKER]
 cd STORM-BREAKER
+cd storm-breaker
 python main.py
+
